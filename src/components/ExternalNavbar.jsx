@@ -4,7 +4,7 @@ import Logo from "../assets/icons/logo.svg";
 
 function ExternalNavbar() {
   return (
-    <header className="font-[Manrope] flex justify-between items-center w-full bg-[#FFE6C3] px-8 py-4">
+    <header className="font-[Manrope] flex justify-between items-center w-full bg-[#FFE6C3] px-8 sm:px-12 md:px-16 py-4 sm:py-6 md:py-8">
       <div className="flex space-x-1">
         <img src={Logo} alt="" />
         <h1 className="font-bold font-Aeonik text-2xl">Centro</h1>
