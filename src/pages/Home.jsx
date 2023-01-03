@@ -8,7 +8,7 @@ import Safety from '../assets/icons/safety.svg'
 import ZeroHierarchy from '../assets/icons/zero-hierarchy.svg'
 import DecisionAndVoting from '../assets/icons/decision-and-voting.svg'
 import Transparency from '../assets/icons/transparency.svg'
-import DAO4Everyone from '../assets/images/daos-for-everyone.png'
+import DAO4Everyone from '../assets/images/DAOs-for-everyone.png'
 function Home() {
   return (
     <div>
