@@ -144,7 +144,10 @@ function Home() {
             </section>
             {/* Join your community, today */}
             <section className="bg-[#141115] py-12 lg:py-20 pb-28">
-                <div data-aos="fade-up" className="bg-[#FFE6C3] w-4/5 p-12 rounded-md text-center mx-auto">
+                <div 
+                    style={{ backgroundImage:`url(${Pattern})` }}
+                    data-aos="fade-up" 
+                    className="bg-[#FFE6C3] bg-blend-multiply w-4/5 p-12 rounded-md text-center mx-auto">
                     <h1 className="font-Aeonik font-bold text-4xl">Join your community, today</h1>
                     <p className="font-[Manrope] sm:w-2/3 max-w-lg mx-auto text-[#57534E] mt-5 mb-6">Look around, find the DAO(s)that interests you and start contributing!</p>
                     <Link className="button button--aylen w-fit mx-auto px-6 py-3 font-[Manrope] bg-[#141115] hover:bg-stone-500/0.2 text-[#FFE6C3] hover:text-white relative block rounded-md text-sm font-medium overflow-hidden" to="/">Launch the DAO Explorer</Link>
