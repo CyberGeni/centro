@@ -38,3 +38,6 @@
 	-webkit-transition-delay: 0.175s;
 	transition-delay: 0.175s;
 }
+header {
+	background-color: #ffe6c3 !important;
+}
