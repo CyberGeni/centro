@@ -1,27 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import ConnectWalletButton from "./ConnectWalletButton";
 import Logo from "../assets/icons/logo.svg";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import Pattern from "../assets/icons/bg-pattern.svg";
 import "../App.css";
-import Aos from "aos";
-function ExternalNavbar() {
-  AOS.init({
-    // Global settings:
-    disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-    initClassName: "aos-init", // class applied after initialization
-    animatedClassName: "aos-animate", // class applied on animation
-    useClassNames: true, // if true, will add content of `data-aos` as classes on scroll
-    duration: 400, // values from 0 to 3000, with step 50ms
-    easing: "ease", // default easing for AOS animations
-    once: false, // whether animation should happen only once - while scrolling down
-    mirror: false, // whether elements should animate out while scrolling past them
-  });
 
+function ExternalNavbar() {
   const [isActive, setActive] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
+
   const handleScroll = () => {
     const currentScrollPos = window.scrollY;
 
@@ -42,6 +30,7 @@ function ExternalNavbar() {
 
   function handleClick() {
     isActive ? setActive(false) : setActive(true);
+    console.log('clicked')
     if (window.innerWidth > 768) {
       setActive(true);
     }
@@ -79,9 +68,14 @@ function ExternalNavbar() {
     //   </div>  ${visible ? 'top-0' : ''}
     // </header>
     <header
-      className={`transition-all px-8 sm:px-12 md:px-16 lg:px-28 xl:px-32 py-4 z-50 sticky flex justify-between mx-auto list-none overflow-hidden w-full
+      style={{ backgroundImage: `url(${Pattern})` }}
+      className={`bg-blend-multiply transition-all px-8 sm:px-12 md:px-16 lg:px-28 xl:px-32 py-4 z-10 sticky flex justify-between mx-auto list-none overflow-hidden w-full
         ${isActive ? " bg-[#FFE6C3]" : "backdrop-blur-md"}
-        ${visible ? "top-0 bg-[#FFE6C3]/20 transition-all" : "data-aos fade-down"}
+        ${
+          visible
+            ? "top-0 bg-[#FFE6C3]/20 transition-all"
+            : "data-aos fade-down"
+        }
         `}
     >
       <img src={Logo} alt="" />
@@ -89,7 +83,7 @@ function ExternalNavbar() {
       <div
         className={
           isActive
-            ? "top-0 right-[25vw] z-[1000000] md:left-unset transition-all flex flex-col md:flex-row justify-center w-[75vw] md:w-auto h-screen md:h-fit space-y-4 md:space-y-0 fixed md:relative bg-[#141115] md:bg-transparent text-[#FFE6C3] md:text-[#141115] md:right-[unset] md:space-x-4 md:items-center md:mx-auto md:justify-center"
+            ? "top-0 right-[25vw] z-[1000000] md:left-unset transition-all flex flex-col md:flex-row justify-center w-[75vw] md:w-auto h-screen md:h-fit space-y-4 md:space-y-0 fixed md:relative bg-[#0c0b0c] md:bg-transparent text-[#FFE6C3] md:text-[#141115] md:right-[unset] md:space-x-4 md:items-center md:mx-auto md:justify-center"
             : "transition-all right-[100vw] absolute md:relative md:flex md:justify-between w-full md:left-0 md:text-lg md:my-2"
         }
       >
@@ -107,9 +101,7 @@ function ExternalNavbar() {
       </div>
 
       <div className="flex items-center space-x-6">
-        <button className="button button--aylen -z-2 px-6 py-3 font-[Manrope] bg-[#141115] hover:bg-stone-500/0.2 text-[#FFE6C3] hover:text-white relative rounded-md text-sm font-medium overflow-hidden w-max">
-          Connect your wallet
-        </button>
+        <ConnectWalletButton />
         <svg
           onClick={handleClick}
           xmlns="http://www.w3.org/2000/svg"

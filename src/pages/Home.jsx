@@ -20,7 +20,7 @@ function Home() {
   return (
     <div>
         <ExternalNavbar />
-        <main className="scroll-smooth">
+        <main className="scroll-smooth relative -z-50">
             {/* hero */}
             <div 
                 style={{ backgroundImage:`url(${Pattern})` }}
@@ -49,9 +49,9 @@ function Home() {
                         height="315"
                         src="https://www.youtube.com/embed/KHm0uUPqmVE" 
                         title="YouTube video player" 
-                        frameborder="0" 
+                        frameBorder="0" 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen
+                        allowFullScreen
                     ></iframe>
                 </div>
                 
