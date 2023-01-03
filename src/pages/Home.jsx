@@ -21,7 +21,7 @@ function Home() {
                     <p className="font-[Manrope] my-6 w-4/5 md:w-3/4 font-medium">Find worthy DAOs to make meaningful collaborations in, collaborate, and build, with Centro's DAO explorer.</p>
                     <div className="flex space-x-3">
                         <a className="px-6 py-2.5 font-[Manrope] font-medium text-sm border-[#141115] border-2 rounded" href="#dao">What is a DAO?</a>
-                        <Link className="px-6 py-3 font-[Manrope] font-medium text-sm bg-[#141115] hover:opacity-80 transition-all text-[#FFE6C3] rounded">I want to join a DAO</Link>
+                        <Link className="button button--aylen px-6 py-3 font-[Manrope] bg-[#141115] hover:bg-stone-500/0.2 text-[#FFE6C3] hover:text-white relative rounded-md text-sm font-medium overflow-hidden">I want to join a DAO</Link>
                     </div>
                 </section>
                 <section>
@@ -117,7 +117,7 @@ function Home() {
                 <div className="bg-[#FFE6C3] w-4/5 p-12 rounded-md text-center mx-auto">
                     <h1 className="font-Aeonik font-bold text-4xl">Join your community, today</h1>
                     <p className="font-[Manrope] sm:w-2/3 max-w-lg mx-auto text-[#57534E] mt-5 mb-6">Look around, find the DAO(s)that interests you and start contributing!</p>
-                    <Link className="px-6 py-3 font-[Manrope] font-medium text-sm bg-[#141115] hover:opacity-80 transition-all text-[#FFE6C3] rounded" to="/">Launch the DAO Explorer</Link>
+                    <Link className="button button--aylen w-fit mx-auto px-6 py-3 font-[Manrope] bg-[#141115] hover:bg-stone-500/0.2 text-[#FFE6C3] hover:text-white relative block rounded-md text-sm font-medium overflow-hidden" to="/">Launch the DAO Explorer</Link>
                 </div>
             </section>
         </main>
