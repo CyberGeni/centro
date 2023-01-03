@@ -11,6 +11,8 @@ import ZeroHierarchy from '../assets/icons/zero-hierarchy.svg'
 import DecisionAndVoting from '../assets/icons/decision-and-voting.svg'
 import Transparency from '../assets/icons/transparency.svg'
 import DAO4Everyone from '../assets/images/DAOs-for-everyone.png'
+import Pattern from '../assets/icons/bg-pattern.svg'
+
 function Home() {
 
     AOS.init({
@@ -41,7 +43,9 @@ function Home() {
         <ExternalNavbar />
         <main className="scroll-smooth">
             {/* hero */}
-            <div className="relative bg-[#FFE6C3] h-[90vh] md:h-[83vh] flex flex-col md:flex-row justify-center md:justify-start">
+            <div 
+                style={{ backgroundImage:`url(${Pattern})` }}
+                className="relative bg-[#FFE6C3] bg-blend-multiply h-[90vh] md:h-[83vh] flex flex-col md:flex-row justify-center md:justify-start">
                 <section className="relative z-10 px-8 sm:px-12 md:px-16 lg:px-28 xl:px-32 space-y-6 md:flex md:flex-col md:justify-center md:w-4/5 lg:w-2/3 max-w-2xl md:max-w-none">
                     <h1 className="-mt-10 text-5xl sm:text-6xl md:text-7xl md:leading-none font-Aeonik font-black">Discover an easy way to make a difference</h1>
                     <p className="font-[Manrope] my-6 w-4/5 md:w-3/4 font-medium">Find worthy DAOs to make meaningful collaborations in, collaborate, and build, with Centro's DAO explorer.</p>

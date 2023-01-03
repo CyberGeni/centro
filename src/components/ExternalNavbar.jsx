@@ -1,15 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../assets/icons/logo.svg";
+import Pattern from "../assets/icons/bg-pattern.svg";
 import '../App.css'
 function ExternalNavbar() {
-  return (
-    <header className="font-[Manrope] flex justify-between items-center w-full bg-[#FFE6C3] px-8 sm:px-12 md:px-16 lg:px-28 xl:px-32 py-4 sm:py-6 md:py-8">
-      <div className="flex space-x-1">
-        <img src={Logo} alt="" />
 
+  const [isActive, setActive] = useState(false)
+
+  function handleClick() {  
+    isActive ? setActive(false) : setActive(true)
+    if (window.innerWidth > 768) {
+      setActive(true)
+    }
+  }
+
+  return (
+    <header 
+      style={{ backgroundImage:`url(${Pattern})` }}
+      className="bg-blend-multiply font-[Manrope] flex justify-between items-center w-full bg-[#FFE6C3] px-8 sm:px-12 md:px-16 lg:px-28 xl:px-32 py-4 sm:py-6 md:py-8">
+      <div 
+        
+        className="flex space-x-1">
+        <img src={Logo} alt="" />
       </div>
-      <nav className="hidden md:flex bg-[#FFE6C3] sm:space-x-3 text-gray-700">
+      <nav className="font-medium hidden md:flex bg-[#FFE6C3] sm:space-x-3 text-gray-700">
         <Link>Home</Link>
         <Link>How it works</Link>
         <Link>FAQs</Link>
@@ -19,6 +33,7 @@ function ExternalNavbar() {
           Connect your wallet
         </button>
         <svg
+          onClick={handleClick}
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           width="24"
