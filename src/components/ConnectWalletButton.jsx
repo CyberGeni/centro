@@ -1,21 +1,45 @@
 import React from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
-
+import Metamask from "../assets/icons/metamask.svg";
+import TrustWallet from "../assets/icons/trust-wallet.svg";
+import WalletConnect from "../assets/icons/wallet-connect.svg";
+import Coinbase from "../assets/icons/coinbase.svg";
+import BraveWallet from "../assets/icons/brave-wallet.svg";
+import Progress from "../assets/images/progress.svg";
 function ConnectWalletButton() {
   let [isOpen, setIsOpen] = useState(false);
 
   function toggleModal() {
     isOpen ? setIsOpen(false) : setIsOpen(true);
   }
-  //   function closeModal() {
-  //     setIsOpen(false);
-  //   }
-
-  //   function openModal() {
-  //     setIsOpen(true);
-  //   }
-
+  const wallets = [
+    {
+      id: 1,
+      name: "Brave Wallet",
+      image: BraveWallet,
+    },
+    {
+      id: 2,
+      name: "Metamask",
+      image: Metamask,
+    },
+    {
+      id: 3,
+      name: "Coinbase",
+      image: Coinbase,
+    },
+    {
+      id: 4,
+      name: "Trust Wallet",
+      image: TrustWallet,
+    },
+    {
+      id: 5,
+      name: "Wallet Connect",
+      image: WalletConnect,
+    },
+  ];
   return (
     <main>
       <button
@@ -54,28 +78,34 @@ function ConnectWalletButton() {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
-                  <Dialog.Title
-                    as="h3"
-                    className="text-lg font-medium leading-6 text-gray-900"
-                  >
-                    connect wallet modal
-                  </Dialog.Title>
-                  <div className="mt-2">
-                    <p className="text-sm text-gray-500">
-                      wallet successfully connected!
-                    </p>
-                  </div>
-
-                  <div className="mt-4">
-                    <button
-                      type="button"
-                      className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
-                      onClick={toggleModal}
+                <Dialog.Panel className=" grid sm:grid-cols-5 w-full max-w-3xl transform overflow-hidden rounded-2xl  text-left align-middle shadow-xl transition-all">
+                  <section className="px-12 py-14 col-span-2 bg-[#FFE6C3]">
+                    <Dialog.Title
+                      as="h3"
+                      className="font-Aeonik text-2xl font-semibold leading-6 text-[#141115]"
                     >
-                      Got it, thanks!
-                    </button>
-                  </div>
+                      Connect wallet
+                    </Dialog.Title>
+                    <Dialog.Description className="mt-2 text-sm text-[#141115]">
+                      <p className="text-[#141115] font-[Manrope] my-4">
+                        Connecting your wallet to join a DAO is like “logging
+                        in” to Web3. Select your wallet from the options listed
+                        on the right to get started.
+                      </p>
+                      <img src={Progress} alt="" />
+                    </Dialog.Description>
+                  </section>
+                  <section className="grid place-content-stretch w-full p-12 sm:p-20 space-y-3 col-span-3 bg-[#141115]">
+                    {wallets.map((wallet) => (
+                      <div
+                        key={wallet.id}
+                        className="transition-all hover:bg-stone-100/5 p-3 flex items-center  border border-stone-700 rounded md space-x-3"
+                      >
+                        <img className="w-8 h-8" src={wallet.image} alt="" />
+                        <span className="text-[#F5F6F7] font-[Manrope]">{wallet.name}</span>
+                      </div>
+                    ))}
+                  </section>
                 </Dialog.Panel>
               </Transition.Child>
             </div>
