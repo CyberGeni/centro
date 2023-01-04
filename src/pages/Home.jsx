@@ -12,7 +12,7 @@ import DecisionAndVoting from '../assets/icons/decision-and-voting.svg'
 import Transparency from '../assets/icons/transparency.svg'
 import DAO4Everyone from '../assets/images/DAOs-for-everyone.png'
 import Pattern from '../assets/icons/bg-pattern.svg'
-
+import '../App.css'
 function Home() {
 
     AOS.init();
