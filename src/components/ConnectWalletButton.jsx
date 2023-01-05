@@ -50,7 +50,7 @@ function ConnectWalletButton() {
       </button>
 
       {isOpen && (
-        <div className="fixed inset-0 flex items-center justify-center z-[100000]  "></div>
+        <div className="fixed inset-0 flex items-center justify-center z-[100000]"></div>
       )}
 
       <Transition appear show={isOpen} as={Fragment}>
@@ -64,7 +64,7 @@ function ConnectWalletButton() {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <div className="fixed inset-0 bg-black bg-opacity-25" />
+            <div className="fixed inset-0 backdrop-blur bg-black bg-opacity-25" />
           </Transition.Child>
 
           <div className="fixed inset-0 overflow-y-auto">
