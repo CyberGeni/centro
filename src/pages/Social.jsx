@@ -10,7 +10,7 @@ function Social() {
         <motion.div 
           layoutId={dao.id} 
           onClick={() => setSelectedId(dao.id)}
-          className="bg-[#131014] border border-[#1C1917] rounded-lg p-6 grid justify-between ">
+          className="bg-[#131014]  border border-[#1C1917] rounded-lg p-6 grid justify-between ">
           <motion.div className="flex justify-between items-center">
             <motion.div className="flex items-center space-x-2">
               <motion.img 
