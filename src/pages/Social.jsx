@@ -1,14 +1,12 @@
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React from 'react'
 import daos from "../db/dao.js";
-
-function DAOs() {
-  
-  const [selectedId, setSelectedId] = useState(null);
-
+import { motion, AnimatePresence } from "framer-motion";
+function Social() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-6 gap-6">
-      {daos.map((dao) => (
+    <div  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-6 gap-6">
+      {daos
+        .filter((dao) => dao.category === "Social")
+        .map((dao) => (
         <motion.div 
           layoutId={dao.id} 
           onClick={() => setSelectedId(dao.id)}
@@ -27,25 +25,8 @@ function DAOs() {
           <motion.span className="bg-[#FFE6C3] px-3 py-1 rounded-full font-Aeonik text-sm text-[#131014] w-fit h-fit">{dao.category}</motion.span>
         </motion.div>
       ))}
-
-      {/* <AnimatePresence>
-        {selectedId && (
-          <motion.div layoutId={selectedId}>
-            <motion.div>
-              <motion.div>
-                <motion.img src={daos.image} alt={daos.name} />
-                <motion.h3>{daos.name}</motion.h3>
-              </motion.div>
-              <motion.span>{daos.member_count}members</motion.span>
-            </motion.div>
-            <motion.p>{daos.short_description}</motion.p>
-            <motion.span>{daos.category}</motion.span>
-            <motion.button onClick={() => setSelectedId(null)} />
-          </motion.div>
-        )}
-      </AnimatePresence> */}
     </div>
-  );
+  )
 }
 
-export default DAOs;
+export default Social

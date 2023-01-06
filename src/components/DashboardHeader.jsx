@@ -2,7 +2,7 @@ import React from "react";
 
 function DashboardHeader() {
   return (
-    <div className="flex justify-between items-center border-b border-b-[#1C1917] py-4 px-6">
+    <div className="flex justify-between items-center border-b border-b-[#1C1917] py-4 px-6 fixed bg-[#0D0B0E] w-3/4">
       <div className="flex flex-col text-white">
         <h2 className="text-xl font-medium font-Aeonik">DAOs</h2>
         <span className="font-[Manrope] text-white/60 text-sm">
