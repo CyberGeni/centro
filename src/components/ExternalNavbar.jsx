@@ -88,13 +88,13 @@ function ExternalNavbar() {
         }
       >
         <nav className="font-[Manrope] space-y-2 md:w-full md:space-y-0 flex flex-col md:flex-row md:items-center md:justify-center md:py-3 md:px-0 md:space-x-5">
-          <Link className="hover:bg-stone-600/30 pl-12 md:pl-0 py-5 md:py-0 hover:border-r-8 hover:border-r-[#FFE6C3] transition-all">
+          <Link className="hover:bg-stone-600/30 md:hover:bg-transparent pl-12 md:pl-0 py-5 md:py-0 hover:border-r-8 hover:border-r-[#FFE6C3] md:hover:border-r-0 transition-all">
             Home
           </Link>
-          <Link className="hover:bg-stone-600/30 pl-12 md:pl-0 py-5 md:py-0 hover:border-r-8 hover:border-r-[#FFE6C3] transition-all">
+          <Link className="hover:bg-stone-600/30 md:hover:bg-transparent pl-12 md:pl-0 py-5 md:py-0 hover:border-r-8 hover:border-r-[#FFE6C3] md:hover:border-r-0 transition-all">
             How it works
           </Link>
-          <Link className="hover:bg-stone-600/30 pl-12 md:pl-0 py-5 md:py-0 hover:border-r-8 hover:border-r-[#FFE6C3] transition-all">
+          <Link className="hover:bg-stone-600/30 md:hover:bg-transparent pl-12 md:pl-0 py-5 md:py-0 hover:border-r-8 hover:border-r-[#FFE6C3] md:hover:border-r-0 transition-all">
             FAQs
           </Link>
         </nav>

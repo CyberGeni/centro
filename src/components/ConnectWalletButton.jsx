@@ -20,8 +20,8 @@ function ConnectWalletButton() {
   function redirect() {
     setIsLoading(true);
     setTimeout(() => {
-      navigate("/dashboard");
-    }, 5000);
+      navigate("/dashboard/all");
+    }, 3000);
   }
   const wallets = [
     {
@@ -129,7 +129,7 @@ function ConnectWalletButton() {
                       <div
                         onClick={redirect}
                         key={wallet.id}
-                        className="transition-all hover:bg-stone-100/5 p-3 flex items-center  border border-stone-700 rounded md space-x-3"
+                        className="cursor-pointer transition-all hover:bg-stone-100/5 p-3 flex items-center  border border-stone-700 rounded md space-x-3"
                       >
                         <img className="w-8 h-8" src={wallet.image} alt="" />
                         <span className="text-[#F5F6F7] font-[Manrope]">
