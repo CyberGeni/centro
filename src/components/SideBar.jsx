@@ -4,8 +4,8 @@ import Logo from "../assets/icons/logo-light.svg";
 import '../App.css'
 function SideBar() {
   return (
-    <div className="bg-[#131014] h-screen">
-      <div className="py-6 mx-auto ">
+    <div className="bg-[#131014] h-screen w-full max-w-xs ">
+      <div className="py-6 mb-8">
         <img className="mx-auto" src={Logo} alt="" />
       </div>
       <nav className="text-white flex flex-col my-2">
