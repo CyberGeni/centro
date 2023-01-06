@@ -41,3 +41,10 @@
 header {
 	background-color: #ffe6c3 !important;
 }
+a.active {
+	color: #ffe6c3 !important;
+	border-left-width: 4px;
+    border-right-width: 4px;
+	border-color: rgb(255 230 195 / 1);
+	background-color: rgba(255, 230, 195, 0.05);
+}
