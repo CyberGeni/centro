@@ -2,7 +2,7 @@ import React, { useState, Fragment } from "react";
 import { motion } from "framer-motion";
 import daos from "../db/dao.js";
 import { Dialog, Transition } from '@headlessui/react'
-
+import { Link } from "react-router-dom";
 
 function DAOs() {
   const [isOpen, setIsOpen] = useState(false);
@@ -138,9 +138,9 @@ function DAOs() {
                           </p>
                         </div>
                         <div className="w-full flex justify-end">
-                          <button className="px-5 py-3 font-semibold bg-[#FFE6C3] text-[#141115] rounded-md my-4 outline-none">
+                          <Link to={dao.name} className="relative z-[1000] px-5 py-3 font-semibold bg-[#FFE6C3] text-[#141115] rounded-md my-4 outline-none">
                             Join {dao.name}
-                          </button>
+                          </Link>
                         </div>
                       </Dialog.Description>
                     </section>
@@ -153,7 +153,7 @@ function DAOs() {
       )}
 
       {isOpen && (
-        <div className="fixed inset-0 flex items-center justify-center z-[100000]"></div>
+        <div className="fixed inset-0 flex items-center justify-center"></div>
       )}
 
       {daos

@@ -1,6 +1,7 @@
 import React from "react";
 import daos from "../db/dao.js";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 function NonProfits() {
   return (
     <>
