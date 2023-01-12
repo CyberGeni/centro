@@ -4,7 +4,7 @@ import Logo from "../assets/icons/logo-light.svg";
 import '../App.css'
 function SideBar() {
   return (
-    <div className="bg-[#131014] h-screen w-1/4 md:w-1/5 fixed">
+    <div className="bg-[#131014] h-screen w-1/3 md:w-1/5 fixed">
       <div className="py-6 mb-8">
         <img className="mx-auto" src={Logo} alt="" />
       </div>

@@ -7,7 +7,7 @@ function Dashboard() {
   return (
     <div className="relative flex text-white bg-[#0D0B0E] min-h-screen overflow-x-hidden ">
         <SideBar />
-        <div className="bg-[#0D0B0E] w-3/4 md:w-4/5 ml-auto space-y-20">
+        <div className="bg-[#0D0B0E] w-2/3 md:w-4/5 ml-auto space-y-40 md:space-y-20">
             <DashboardHeader />
             <Outlet />
         </div>

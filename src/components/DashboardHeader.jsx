@@ -2,14 +2,14 @@ import React from "react";
 
 function DashboardHeader() {
   return (
-    <div className="flex justify-between items-center border-b border-b-[#1C1917] py-4 px-6 fixed bg-[#0D0B0E] w-4/5 ">
+    <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 justify-between md:items-center border-b border-b-[#1C1917] py-4 px-6 fixed bg-[#0D0B0E] w-4/5 ">
       <div className="flex flex-col text-white">
         <h2 className="text-xl font-medium font-Aeonik">DAOs</h2>
         <span className="font-[Manrope] text-white/60 text-sm">
           These are a list of DAOs you can join
         </span>
       </div>
-      <div className="flex items-center space-x-2 px-2 py-1 bg-[#131014] border border-[#1C1917] placeholder:text-[#79716B] rounded-lg h-fit">
+      <div className="w-4/5 md:w-fit flex items-center space-x-2 px-2 py-1 bg-[#131014] border border-[#1C1917] placeholder:text-[#79716B] rounded-lg h-fit">
         <svg
           width="15"
           height="15"
@@ -33,7 +33,7 @@ function DashboardHeader() {
           placeholder="Search DAO"
         />
       </div>
-      <div className="flex items-center space-x-2 px-2 py-1 text-[#A9A29D] font-[Manrope] bg-[#131014] border border-[#1C1917] placeholder:text-[#79716B] rounded-lg h-fit">
+      <div className="w-fit flex items-center space-x-2 px-2 py-1 text-[#A9A29D] font-[Manrope] bg-[#131014] border border-[#1C1917] placeholder:text-[#79716B] rounded-lg h-fit">
         <svg
           width="24"
           height="24"
