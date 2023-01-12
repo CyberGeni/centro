@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import '../App.css'
 import AOS from 'aos'
 import 'aos/dist/aos.css'; 
 import ExternalNavbar from '../components/ExternalNavbar'
@@ -12,7 +13,7 @@ import DecisionAndVoting from '../assets/icons/decision-and-voting.svg'
 import Transparency from '../assets/icons/transparency.svg'
 import DAO4Everyone from '../assets/images/DAOs-for-everyone.png'
 import Pattern from '../assets/icons/bg-pattern.svg'
-import '../App.css'
+
 function Home() {
 
     AOS.init();
@@ -30,7 +31,7 @@ function Home() {
                     <p className="font-[Manrope] my-6 w-4/5 md:w-3/4 font-medium">Find worthy DAOs to make meaningful collaborations in, collaborate, and build, with Centro's DAO explorer.</p>
                     <div className="flex space-x-3">
                         <a className="px-6 py-2.5 font-[Manrope] font-medium text-sm border-[#141115] border-2 rounded" href="#dao">What is a DAO?</a>
-                        <Link className="button button--aylen px-6 py-3 font-[Manrope] bg-[#141115] hover:bg-stone-500/0.2 text-[#FFE6C3] hover:text-white relative rounded-md text-sm font-medium overflow-hidden">I want to join a DAO</Link>
+                        <Link className="button button--aylen -z-2 px-6 py-3 font-[Manrope] bg-[#141115] hover:bg-stone-500/0.2 text-[#FFE6C3] hover:text-white relative rounded-md text-sm font-medium overflow-hidden w-max">I want to join a DAO</Link>
                     </div>
                 </section>
                 <section>
