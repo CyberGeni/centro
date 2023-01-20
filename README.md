@@ -1,5 +1,5 @@
 # centro
-A website consisting of a landing page and a dashboard to help people identify, join and contribute to decentralized autonomous organisations (DAOs)
+A web3 website UI consisting of a landing page and a dashboard to help people identify, join and contribute to decentralized autonomous organisations (DAOs)
 
 
 total code time: 
